@@ -1,0 +1,36 @@
+spring:
+  application: 
+    name: "storemanager"
+    comment: >
+      "initial deploy"
+    buildtime: "@buildtime@"
+    version: "@project.version@"
+  profiles: 
+    active: "@spring.profiles.active@"
+    default: "@spring.profiles.active@"
+  thymeleaf:
+    check-template-location: true
+    cache: false
+server:
+  servlet:
+    contextPath: /storemanager
+  port: 8888
+logging:
+  level:
+    .: debug
+    org:
+      hibernate: DEBUG
+      hibernate.type: DEBUG
+      springframework: DEBUG
+    mx.devhive: DEBUG
+---
+spring:
+  profiles: dev
+  data:
+    mongodb:
+      uri: mongodb+srv://user:pass@mongoameliecluster-bx74j.azure.mongodb.net/test
+      authentication-database: "store"
+      database: "store"
+
+  
+ 

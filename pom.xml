@@ -22,7 +22,7 @@
 
 		<java.version>14</java.version>
 
-<!-- 		<java.version>13</java.version> -->
+		<!-- <java.version>13</java.version> -->
 
 
 		<portDeploy>8888</portDeploy>
@@ -106,6 +106,30 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+
+
+		<!-- junit 5 -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-junit-jupiter</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>de.flapdoodle.embed</groupId>
+			<artifactId>de.flapdoodle.embed.mongo</artifactId>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 
 	<profiles>

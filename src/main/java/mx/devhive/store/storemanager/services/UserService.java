@@ -4,11 +4,13 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import mx.devhive.store.storemanager.model.User;
 import mx.devhive.store.storemanager.repositories.UserRepository;
 
 @Service
+@Transactional
 public class UserService {
 	
 	@Autowired
@@ -22,6 +24,7 @@ public class UserService {
 		return userRepository.findByEmail(email);
 	}
 
+	@Transactional
 	public User saveUser(User user){
 		return userRepository.save(user);
 	}

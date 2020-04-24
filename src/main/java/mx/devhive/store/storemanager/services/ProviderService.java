@@ -32,7 +32,6 @@ public class ProviderService {
 		return providerRepository.save(provider);
 	}
 
-
 	public boolean deleteProviderByEmail(String email){
 		try {
 			providerRepository.deleteByEmail(email);

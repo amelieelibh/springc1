@@ -14,5 +14,7 @@ public interface ProviderRepository
 	
 	Provider findByRfc(String rfc);
 	
+	Provider findByAccount(String account);
+	
 	void deleteByRfc(String rfc);
 }

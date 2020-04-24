@@ -20,6 +20,10 @@ public class ProviderService {
 		return providerRepository.findAll();
 	}
 
+	public Provider findByAccount(String account){
+		return providerRepository.findByAccount(account);
+	}
+	
 	public Provider findProviderByEmail(String email){
 		return providerRepository.findByEmail(email);
 	}

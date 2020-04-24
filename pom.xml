@@ -14,7 +14,7 @@
 
 	<groupId>mx.devhive.store</groupId>
 	<artifactId>storemanager</artifactId>
-	<version>0.0.4-SNAPSHOT</version>
+	<version>0.0.5-SNAPSHOT</version>
 	<name>storemanager</name>
 	<description>Aplicación de servicios web para administración de una tienda</description>
 

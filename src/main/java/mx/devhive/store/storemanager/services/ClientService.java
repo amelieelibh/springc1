@@ -1,5 +1,10 @@
 package mx.devhive.store.storemanager.services;
 
+
+
+//Crear un servicio para vender y comprar productos 
+
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;

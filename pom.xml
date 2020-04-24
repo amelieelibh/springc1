@@ -22,9 +22,6 @@
 
 		<java.version>14</java.version>
 
-<!-- 		<java.version>13</java.version> -->
-
-
 		<portDeploy>8888</portDeploy>
 
 		<swagger.version>2.9.1</swagger.version>

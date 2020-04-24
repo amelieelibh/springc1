@@ -42,7 +42,6 @@ public class UserController {
 	@ApiOperation(value = "Método que busca todos los usuarios de la base de datos", 
 			responseContainer = "List", response = User.class)
 	@GetMapping(value = "/", 
-			consumes = {MediaType.APPLICATION_JSON_VALUE},
 			produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<User> getAllUsers(){
 		return userService.getAllUsers();

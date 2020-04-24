@@ -46,4 +46,10 @@ public class ClientController {
 		return clientService.deleteClientByEmail(email);
 	}
 	
+	@GetMapping(value = "/orderByRfcDesc")
+	public List<Client> getAllOrderByRfcDesc(){
+		return null; // clientService.findByRfcDesc();
+	}
+	
+	
 }

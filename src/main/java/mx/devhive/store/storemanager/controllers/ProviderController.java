@@ -50,4 +50,9 @@ public class ProviderController {
 		return providerService.deleteProviderByEmail(email);
 	}
 	
+	@GetMapping(value = "/byAccount/{account}")
+	public Provider findByAccount(@PathVariable(value = "account") String account) {
+		return null; // providerService.findByAccount(account);
+	}
+	
 }

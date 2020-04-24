@@ -1,25 +1,28 @@
 package mx.devhive.store.storemanager.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import mx.devhive.store.storemanager.services.ProductoSevice;
+
 @Controller
 @RequestMapping("/products")
 public class ProductsController {
 
-//	@Autowired
-//	private ProductService productService;
+	@Autowired
+	private ProductoSevice productService;
 
 	@PutMapping(value = "/buy/{productKey}")
 	public String buy(@PathVariable(value = "productKey") String id) {
-		return null; // productService.buy(id);
+		return productService.comprar(id);
 	}
 	
 
 	@PutMapping(value = "/sell/{productKey}")
 	public String sell(@PathVariable(value = "productKey") String id) {
-		return null; // productService.sell(id);
+		return productService.vender(id);
 	}
 }

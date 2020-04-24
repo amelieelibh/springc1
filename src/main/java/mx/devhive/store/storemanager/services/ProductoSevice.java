@@ -7,18 +7,15 @@ public class ProductoSevice {
 	
 	public String info;
 	
-	public String comprar() {
+	public String comprar(String sku) {
 		
-		info = "Producto comprado"; 
+		info = "Producto comprado: " + sku; 
 		  
 		return info;
 	}	
 	
-	public String Vender() {
-		
-		info = "Producto comprado";
-		
-		info = "Producto vendido";
+	public String vender(String sku) {
+		info = "Producto vendido: " + sku;
 		
 		return info;
 	}

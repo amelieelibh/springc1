@@ -52,7 +52,7 @@ public class ProviderController {
 	
 	@GetMapping(value = "/byAccount/{account}")
 	public Provider findByAccount(@PathVariable(value = "account") String account) {
-		return null; // providerService.findByAccount(account);
+		return providerService.findByAccount(account);
 	}
 	
 }

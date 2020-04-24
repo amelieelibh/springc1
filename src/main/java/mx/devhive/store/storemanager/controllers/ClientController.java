@@ -48,7 +48,7 @@ public class ClientController {
 	
 	@GetMapping(value = "/orderByRfcDesc")
 	public List<Client> getAllOrderByRfcDesc(){
-		return null; // clientService.findByRfcDesc();
+		return clientService.getAllClientsOrderedDesc();
 	}
 	
 	

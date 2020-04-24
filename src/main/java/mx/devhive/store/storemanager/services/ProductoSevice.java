@@ -9,8 +9,8 @@ public class ProductoSevice {
 	
 	public String comprar() {
 		
-		info = "Producto comprado";
-		
+		info = "Producto comprado"; 
+		  
 		return info;
 	}	
 	

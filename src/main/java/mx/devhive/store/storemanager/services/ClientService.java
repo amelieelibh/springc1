@@ -9,6 +9,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.data.domain.Sort;
 
 import lombok.extern.slf4j.Slf4j;
 import mx.devhive.store.storemanager.model.Client;
@@ -25,6 +26,10 @@ public class ClientService {
 		return clientRepository.findAll();
 	}
 
+	public List<Client> getAllClientsOrderedDesc(){
+		return clientRepository.findAllOrderByRfc();
+	}
+	
 	public Client findClientByEmail(String email){
 		return clientRepository.findByEmail(email);
 	}

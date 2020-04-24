@@ -14,12 +14,16 @@
 
 	<groupId>mx.devhive.store</groupId>
 	<artifactId>storemanager</artifactId>
-	<version>0.0.4-SNAPSHOT</version>
+	<version>0.0.5-SNAPSHOT</version>
 	<name>storemanager</name>
 	<description>Aplicación de servicios web para administración de una tienda</description>
 
 	<properties>
-		<java.version>1.8</java.version>
+
+		<java.version>14</java.version>
+
+<!-- 		<java.version>13</java.version> -->
+
 
 		<portDeploy>8888</portDeploy>
 

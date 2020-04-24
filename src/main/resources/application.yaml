@@ -2,7 +2,12 @@ spring:
   application: 
     name: "storemanager"
     comment: >
+      "upgrade a la versión 2, ya incluye base de datos"
+      "integración de servicios"
       "initial deploy"
+    comments2:
+      - "item1"
+      - "item2"
     buildtime: "@buildtime@"
     version: "@project.version@"
   profiles: 

@@ -1,5 +1,7 @@
 package mx.devhive.store.storemanager;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.info.BuildProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.AsyncSupportConfigurer;
@@ -18,6 +20,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class MvcConfig implements WebMvcConfigurer {
 
+	@Autowired
+	private BuildProperties buildProperties;
+	
 	@Bean
 	public Docket productApi() {
 		return new Docket(DocumentationType.SWAGGER_2)
@@ -29,11 +34,11 @@ public class MvcConfig implements WebMvcConfigurer {
 	}
 	private ApiInfo metaData() {
 		return new ApiInfoBuilder()
-				.title("Spring Boot Swagger App")
-				.description("\"Spring Boot Swagger Server App\"")
-				.version("1.0.0")
+				.title("Documentación de Storemanager")
+				.description("\"Esta es mi documentación\"")
+				.version(buildProperties.getVersion())
 				.license("Apache License Version 2.0")
-				.licenseUrl("https://www.apache.org/licenses/LICENSE-2.0\"")
+				.licenseUrl("https://www.patito.org/licenses/LICENSE-2.0\"")
 				.build();
 	}
 

@@ -90,6 +90,12 @@
 			<optional>true</optional>
 		</dependency>
 
+		<dependency>
+			<groupId>com.google.cloud.tools</groupId>
+			<artifactId>jib-maven-plugin</artifactId>
+			<version>2.2.0</version>
+		</dependency>
+
 
 
 		<dependency>
@@ -136,6 +142,33 @@
 				<spring.profiles.active>dev</spring.profiles.active>
 			</properties>
 
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>com.google.cloud.tools</groupId>
+						<artifactId>jib-maven-plugin</artifactId>
+						<version>2.2.0</version>
+						<configuration>
+							<from>
+								<!-- <image>openjdk:13.0.1-jdk</image> -->
+								<image>adoptopenjdk/openjdk14:jre14u-ubuntu-nightly</image>
+							</from>
+							<to>
+								<image>ameliebh/springcourse1:latest</image>
+								<auth>
+									<username>${DOCKERHUB_USERNAME}</username>
+									<password>${DOCKERHUB_PASS}</password>
+								</auth>
+							</to>
+							<container>
+								<ports>
+									<port>8888</port>
+								</ports>
+							</container>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
 		</profile>
 	</profiles>
 

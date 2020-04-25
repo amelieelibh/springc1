@@ -11,6 +11,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
 import mx.devhive.store.storemanager.model.dto.UserType;
 
 @Data
